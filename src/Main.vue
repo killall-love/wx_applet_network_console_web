@@ -23,7 +23,7 @@
                         </div>
                     </el-popover>
 
-                    <el-dialog title="提示" :show-close="false" :close-on-press-escape="false"
+                    <el-dialog title="提示" :show-close="false" :close-on-press-escape="false" :close-on-click-modal ="false"
                         :visible.sync="dialogVisible" width="30%">
                         <span><el-input placeholder="请输入WebScoket地址" v-model="WebSocketUrl"></el-input></span>
                         <span slot="footer" class="dialog-footer">
