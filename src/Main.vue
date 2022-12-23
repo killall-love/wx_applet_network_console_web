@@ -88,6 +88,7 @@ export default {
                 this.$message.error('websocket地址填写不合法！');
                 return;
             }
+            this.WebSocketUrl = wsuri;
             this.initSocket();
         },
         search() {
