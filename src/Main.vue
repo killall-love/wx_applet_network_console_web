@@ -151,8 +151,10 @@ export default {
                         }
                     };
                     this.ws.onclose = () => {
+                        that.$message.error('websocket地址异常！');
                     };
                     this.ws.error = () => {
+                        that.$message.error('websocket地址异常！');
                     };
                 } else {
                 }
