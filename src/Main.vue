@@ -72,15 +72,15 @@ export default {
             if (r != null) return unescape(r[2]); return null;
         }
         if (getQueryString('url') != null) {
-            this.WebSocketUrl = `wss://${getQueryString('url')}:9090`
+            this.WebSocketUrl = `ws://${getQueryString('url')}:9090`
             this.initSocket();
         }
     },
     methods: {
         handleClose() {
             let wsuri = this.WebSocketUrl || "";
-            if (wsuri.indexOf("wss://") < 0) {
-                wsuri = `wss://${wsuri}`;
+            if (wsuri.indexOf("ws://") < 0) {
+                wsuri = `ws://${wsuri}`;
             }
             const urlReg =
                 /^ws:\/\/(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5]):\d+$/;
